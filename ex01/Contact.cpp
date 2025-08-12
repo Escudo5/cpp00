@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: escudo5 <escudo5@student.42.fr>            +#+  +:+       +#+        */
+/*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 11:52:07 by escudo5           #+#    #+#             */
-/*   Updated: 2025/07/29 12:27:10 by escudo5          ###   ########.fr       */
+/*   Updated: 2025/08/12 14:46:34 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
 Contact::Contact() {};
-Contact::~Contact(){};
+Contact::~Contact() {};
 
 void Contact::setName(const std::string &name)
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: escudo5 <escudo5@student.42.fr>            +#+  +:+       +#+        */
+/*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 11:45:38 by escudo5           #+#    #+#             */
-/*   Updated: 2025/07/29 12:25:03 by escudo5          ###   ########.fr       */
+/*   Updated: 2025/08/12 13:44:43 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,15 @@ class Contact
         std::string getNick() const;
         std::string getPhone() const;
         std::string getSecret() const;
-
+    protected:
+    /* */
     private:
         std::string first_name;
         std::string last_name;
         std::string nickname;
         std::string phone_number;
         std::string darkest_secret;
+    
 };
 
 
