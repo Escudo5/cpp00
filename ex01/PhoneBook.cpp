@@ -6,7 +6,7 @@
 /*   By: smarquez <smarquez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 12:28:57 by escudo5           #+#    #+#             */
-/*   Updated: 2025/08/12 13:47:23 by smarquez         ###   ########.fr       */
+/*   Updated: 2025/08/12 15:24:19 by smarquez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 PhoneBook::PhoneBook() : total_contacts(0), oldest_contact(0) {}
 PhoneBook::~PhoneBook() 
 {
-    std::cout << "ME MUERO" << std::endl;
 }
 void PhoneBook::add()
 {
@@ -25,24 +24,44 @@ void PhoneBook::add()
     std::cout << "Insert new name: \n";
     std::getline(std::cin, input);
     new_contact.setName(input);
-    
+    if  (input.empty())
+    {
+        std::cout << "All fields should be filled, returning to menu: " << std::endl;
+        return;
+    }
     std::cout << "Insert new last name: \n";
     std::getline(std::cin, input);
     new_contact.setLast(input);
+    if  (input.empty())
+    {
+        std::cout << "All fields should be filled, returning to menu: " << std::endl;
+        return;
+    }
 
     std::cout << "Insert nickname: \n";
     std::getline(std::cin, input);
     new_contact.setNick(input);
+    if  (input.empty())
+    {
+        std::cout << "All fields should be filled, returning to menu: " << std::endl;
+        return;
+    }
 
     std::cout << "Insert phone number: \n";
     std::getline(std::cin, input);
     new_contact.setPhone(input);
+    if  (input.empty())
+    {
+        std::cout << "All fields should be filled, returning to menu: " << std::endl;
+        return;
+    }
 
     std::cout << "Insert your darkest secret: \n";
     std::getline(std::cin, input);
     new_contact.setSecret(input);
 
     int pos;
+    
     if (total_contacts < 8)
     {
         pos = total_contacts;
